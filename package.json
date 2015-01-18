@@ -1,0 +1,30 @@
+{
+  "name": "gury",
+  "version": "0.0.0",
+  "description": "PNG is great",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/programble/gury.git"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Curtis McEnroe <curtis@cmcenroe.me> (http://cmcenroe.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/programble/gury/issues"
+  },
+  "homepage": "https://github.com/programble/gury",
+  "dependencies": {
+    "bluebird": "^2.7.1",
+    "msgpack": "^0.2.4",
+    "png-stream": "^1.0.1",
+    "ramda": "^0.8.0",
+    "super-error": "^1.1.0",
+    "superagent": "^0.21.0"
+  }
+}
