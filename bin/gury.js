@@ -14,6 +14,7 @@ var gury = require('../lib');
 var imgur = require('../lib/imgur');
 var metadata = require('../lib/metadata');
 var walk = require('../lib/walk');
+var log = require('../lib/log');
 
 var args = minimist(process.argv.slice(2), {
   alias: {
@@ -22,9 +23,10 @@ var args = minimist(process.argv.slice(2), {
     t: 'list',
     c: 'colorSpace',
     'color-space': 'colorSpace',
+    q: 'quiet',
     h: 'help'
   },
-  boolean: [ 'upload', 'download', 'list', 'help' ],
+  boolean: [ 'upload', 'download', 'list', 'quiet', 'help' ],
   default: { colorSpace: 'rgb' }
 });
 
@@ -50,11 +52,14 @@ if (args.help) {
     '',
     '  -c SPACE, --color-space SPACE        Set color space of PNGs',
     '',
+    '  -q, --quiet                          Suppress progress output',
     '  --version                            Display version and exit',
     '  -h, --help                           Display help and exit'
   ].join('\n'));
   process.exit();
 }
+
+log.enabled = !args.quiet;
 
 if (args.upload) {
   Promise.resolve(args._)
@@ -68,6 +73,7 @@ if (args.upload) {
     .then(R.flatten)
     .then(R.lPartial(gury.upload, args.colorSpace))
     .then(imgur.idToURL)
+    .tap(function() { log(); })
     .then(console.log);
 
 } else if (args.download) {
