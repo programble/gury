@@ -2,7 +2,9 @@
   "name": "gury",
   "version": "0.0.0",
   "description": "PNG is great",
-  "main": "index.js",
+  "bin": {
+    "gury": "bin/gury.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/programble/gury",
   "dependencies": {
     "bluebird": "^2.7.1",
+    "minimist": "^1.1.0",
     "msgpack": "^0.2.4",
     "png-stream": "^1.0.1",
     "ramda": "^0.8.0",
