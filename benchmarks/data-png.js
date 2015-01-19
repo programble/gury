@@ -26,5 +26,6 @@ function benchmark(colorSpace, iterations, target, len) {
 var colorSpace = process.argv[2] || 'rgb';
 var iterations = parseInt(process.argv[3]) || 50;
 var target = parseInt(process.argv[4]) || 1000000;
+var init = parseInt(process.argv[5]) || target;
 
-benchmark(colorSpace, iterations, target, target).then(console.log);
+benchmark(colorSpace, iterations, target, init).then(console.log);
