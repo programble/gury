@@ -2,10 +2,10 @@
 
 Upload anything to [imgur][imgur].
 
-[imgur]: https://imgur.com
-
 Gury uploads files in chunks encoded as PNGs to the anonymous public
 image host [imgur][imgur].
+
+[imgur]: https://imgur.com
 
 ## Install
 
@@ -90,7 +90,7 @@ data images.
 
 ## Warnings
 
-Although files are uploaded in chunks encoded as PNGs, they are fare
+Although files are uploaded in chunks encoded as PNGs, they are far
 from secure. If you are concerned about privacy, encrypt your files
 before uploading them with Gury.
 
