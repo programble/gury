@@ -1,7 +1,7 @@
 {
   "name": "gury",
-  "version": "0.0.0",
-  "description": "PNG is great",
+  "version": "0.1.0",
+  "description": "Upload anything to imgur",
   "bin": {
     "gury": "bin/gury.js"
   },
@@ -13,7 +13,11 @@
     "url": "https://github.com/programble/gury.git"
   },
   "keywords": [
-    "todo"
+    "imgur",
+    "png",
+    "archive",
+    "upload",
+    "download"
   ],
   "author": "Curtis McEnroe <curtis@cmcenroe.me> (http://cmcenroe.me)",
   "license": "ISC",
