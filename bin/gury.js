@@ -85,6 +85,7 @@ if (args.upload) {
       var filename = fileMetadata[0];
       var length = (fileMetadata[2].length - 1) * imgur.MAXIMUM_DATA_LENGTH + fileMetadata[1];
       var ids = fileMetadata[2].join(' ');
-      console.log(filename, length, ids);
+      var hash = fileMetadata[3];
+      console.log(filename, length, hash, ids);
     });
 }
