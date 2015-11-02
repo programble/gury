@@ -1,6 +1,6 @@
 {
   "name": "gury",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Upload anything to imgur",
   "bin": {
     "gury": "bin/gury.js"
